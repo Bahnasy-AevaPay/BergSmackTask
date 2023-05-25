@@ -44,8 +44,11 @@ extension AppCoordinator: MealsListNavigation {
 extension AppCoordinator {
     private func goToMealListScreen() {
         let mealsListVC: MealsListVC = UIViewController.create(storyboardName: StoryBoards.main, identifier: VCs.mealsListVC)
-        let mealsListVM = MealsListVM(with: MealsAPIManager())
+        let mealsListVM = MealsListVM(with: MealsAPIManager(), view: mealsListVC)
         mealsListVC.viewModel = mealsListVM
+        mealsListVM.coordinator = self
+        // Append the Coordinator object to the childCoordinators array
+        childCoordinators.append(self)
         self.navigationController.pushViewController(mealsListVC, animated: true)
     }
     

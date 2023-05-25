@@ -36,7 +36,7 @@ extension MealDetailsCoordinator: MealDetailsNavigation {
 extension MealDetailsCoordinator {
     func start(with id: String) {
         let mealDetailsVC: MealDetailsVC = UIViewController.create(storyboardName: StoryBoards.main, identifier: VCs.mealDetailsVC)
-        let mealDetailsVM = MealDetailsVM(with: id, mealsAPIManager: MealsAPIManager())
+        let mealDetailsVM = MealDetailsVM(with: id, mealsAPIManager: MealsAPIManager(), view: mealDetailsVC)
         mealDetailsVC.viewModel = mealDetailsVM
         mealDetailsVM.coordinator = self
         self.navigationController.pushViewController(mealDetailsVC, animated: true)

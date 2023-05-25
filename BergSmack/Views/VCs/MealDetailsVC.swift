@@ -23,6 +23,10 @@ class MealDetailsVC: UIViewController {
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     
+}
+
+//MARK: Life Cycle
+extension MealDetailsVC{
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.initFetchMealDetails()
@@ -33,9 +37,9 @@ class MealDetailsVC: UIViewController {
         super.viewWillDisappear(animated)
         viewModel.finishPreviewingDetails()
     }
-
 }
 
+//MARK: ViewModel notify ViewCotnroller
 extension MealDetailsVC: MealDetailsVCProtocol{
     func showLoader() {
         self.view.showLoader()

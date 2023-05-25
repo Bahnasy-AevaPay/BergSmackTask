@@ -27,9 +27,10 @@ extension MealsListVC{
         self.setupTableView()
         viewModel.initFetchMealsList()
     }
-
+    
 }
-//MARK:
+
+//MARK: ViewModel notify ViewCotnroller
 extension MealsListVC: MealsListVCProtocol{
     func reloadTableView() {
         self.tableView.reloadData()
@@ -43,12 +44,11 @@ extension MealsListVC: MealsListVCProtocol{
         self.view.hideLoader()
     }
     
-    
 }
 //MARK: TableView Delegation
 extension MealsListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.getItemsCount()
+        return self.viewModel.getItemsCount()//return the count of cell for tableview
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,7 +64,7 @@ extension MealsListVC: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: Helpers
 extension MealsListVC{
-    func setupTableView(){
+    private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         let nib = UINib(nibName: MealTableViewCell.ID, bundle: nil)

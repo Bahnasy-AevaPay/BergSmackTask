@@ -51,6 +51,7 @@ extension MealsListVM {
         }
     }
 }
+
 //MARK: ViewModel to View
 extension MealsListVM: MealsListVMProtocol{
     func didTapCell(at indexPath: IndexPath) {

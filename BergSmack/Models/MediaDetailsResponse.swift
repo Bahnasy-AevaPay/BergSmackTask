@@ -13,7 +13,7 @@ struct MealDetailsBaseReponse: Decodable {
     let meals: [MealDetails]?
 }
 
-struct MealDetails: Decodable {
+struct MealDetails: Codable {
     let strMeal: String?
     let strMealThumb: String?
     let strInstructions: String?

@@ -19,9 +19,9 @@ struct MealsListBaseReponse: Decodable {
     let meals: [Meal]?
 }
 
-struct Meal: Decodable {
-    let strMeal: String?
-    let strMealThumb: String?
-    let idMeal: String?
+struct Meal: Codable {
+    var strMeal: String?
+    var strMealThumb: String?
+    var idMeal: String?
 }
 

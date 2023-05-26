@@ -12,9 +12,13 @@ class MealTableViewCell: UITableViewCell {
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealLabel: UILabel!
     
+    @IBOutlet weak var containerView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        containerView.layer.cornerRadius = 10
+        containerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        containerView.layer.masksToBounds = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

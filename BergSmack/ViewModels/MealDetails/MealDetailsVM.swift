@@ -108,7 +108,7 @@ extension MealDetailsVM {
                 // remove all empty strings from the array
                 self.array = array.filter{$0 != "" && $0 != " "}
                 // here make each 2 iteams separate with / for ingredietns and measures
-                let ingredientAndMeasure = self.array.enumerated().map { "\($0.element) \($0.offset % 2 == 1 ? "\n" : "/ ")" }.joined()
+                let ingredientAndMeasure = self.array.enumerated().map { "\($0.element) \($0.offset % 2 == 1 ? "\n" : ": ")" }.joined()
                 self.view?.setup(image: mealDetails.strMealThumb ?? "", name: mealDetails.strMeal ?? "", instructions:  mealDetails.strInstructions ?? "", ingreadients: ingredientAndMeasure)
             }
             self.view?.hideLoader()

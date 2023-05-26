@@ -26,6 +26,8 @@ extension MealsListVC{
         super.viewDidLoad()
         self.setupTableView()
         viewModel.initFetchMealsList()
+        self.navigationItem.title = "Meals"
+
     }
     
 }

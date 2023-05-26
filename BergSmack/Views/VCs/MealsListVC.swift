@@ -52,7 +52,7 @@ extension MealsListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MealTableViewCell.ID, for: indexPath) as? MealTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.mealsCell, for: indexPath) as? MealTableViewCell else {return UITableViewCell()}
         self.viewModel.configureMealCell(cell: cell, index: indexPath.row)
         return cell
     }
@@ -67,7 +67,7 @@ extension MealsListVC{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        let nib = UINib(nibName: MealTableViewCell.ID, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: MealTableViewCell.ID)
+        let nib = UINib(nibName: Cells.mealsCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Cells.mealsCell)
     }
 }

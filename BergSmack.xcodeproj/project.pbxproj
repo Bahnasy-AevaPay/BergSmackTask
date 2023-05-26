@@ -138,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				10184C0A2A1FD13C002793F2 /* Storyboards */,
+				10AA07392A20D1C300F2F76E /* Assets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -257,6 +258,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		10AA07392A20D1C300F2F76E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				29FF4C002A1BF5D4009F128B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		10FE046B2A1FDE4300EEBCFB /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +321,6 @@
 				29FF4C272A1BF622009F128B /* Models */,
 				29FF4C282A1BF63C009F128B /* Views */,
 				10184C092A1FD134002793F2 /* Resources */,
-				29FF4C002A1BF5D4009F128B /* Assets.xcassets */,
 				29FF4C052A1BF5D4009F128B /* Info.plist */,
 			);
 			path = BergSmack;

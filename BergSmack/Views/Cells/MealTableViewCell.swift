@@ -9,7 +9,6 @@
 import UIKit
 
 class MealTableViewCell: UITableViewCell {
-    static let ID = "MealTableViewCell"
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealLabel: UILabel!
     

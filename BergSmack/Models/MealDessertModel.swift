@@ -8,6 +8,8 @@
 
 import Foundation
 
+// COMMENT #1: This file is no longer needed, remove it.
+
 struct MealDessertModel {
     let meal: String
     let mealPic: String

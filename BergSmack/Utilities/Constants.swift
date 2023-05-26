@@ -19,9 +19,8 @@ struct VCs {
     static let mealDetailsVC = "MealDetailsVC"
 }
 
-// Cells
 struct Cells {
-    static let mealsCell = "MealsCell"
+    static let mealsCell = "MealTableViewCell"
 }
 
 struct NetworkError {
